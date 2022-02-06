@@ -1,0 +1,15 @@
+year = int(input("Which year do you want to check? "))
+
+# leap year happens when year % 4 == 0
+#except when year % 100 == 0
+#  unless also year % 400 == 0
+if (year % 4 == 0):
+    #wasn't printing without this line below. need to say that it's a leap year when div by 4 and not 100.
+    if (year % 4 == 0) and (year % 100 != 0):
+        print("Leap year.")
+    elif (year % 100 == 0) and (year % 400 != 0):
+        print("Not leap year.")
+    elif (year % 100 == 0) and (year % 400 == 0):
+        print("Leap year.")
+else:
+    print("Not leap year.")
